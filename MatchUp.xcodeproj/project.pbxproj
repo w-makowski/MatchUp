@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		66DA76AF2D3C1905004545FB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 66DA76AE2D3C1905004545FB /* FirebaseAnalytics */; };
+		66DA76B12D3C1905004545FB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 66DA76B02D3C1905004545FB /* FirebaseAuth */; };
+		66DA76B32D3C1905004545FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 66DA76B22D3C1905004545FB /* FirebaseFirestore */; };
+		66DA76B52D3C1905004545FB /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 66DA76B42D3C1905004545FB /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		6679EF1F2CF51BD7001470EB /* MatchUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +30,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66DA76B52D3C1905004545FB /* FirebaseMessaging in Frameworks */,
+				66DA76AF2D3C1905004545FB /* FirebaseAnalytics in Frameworks */,
+				66DA76B12D3C1905004545FB /* FirebaseAuth in Frameworks */,
+				66DA76B32D3C1905004545FB /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +76,10 @@
 			);
 			name = MatchUp;
 			packageProductDependencies = (
+				66DA76AE2D3C1905004545FB /* FirebaseAnalytics */,
+				66DA76B02D3C1905004545FB /* FirebaseAuth */,
+				66DA76B22D3C1905004545FB /* FirebaseFirestore */,
+				66DA76B42D3C1905004545FB /* FirebaseMessaging */,
 			);
 			productName = MatchUp;
 			productReference = 6679EF1F2CF51BD7001470EB /* MatchUp.app */;
@@ -94,6 +109,9 @@
 			);
 			mainGroup = 6679EF162CF51BD7001470EB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				66DA76AD2D3C1905004545FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6679EF202CF51BD7001470EB /* Products */;
 			projectDirPath = "";
@@ -254,11 +272,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MatchUp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs access to your location to provide location-based services";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,11 +301,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MatchUp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs access to your location to provide location-based services";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,6 +342,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66DA76AD2D3C1905004545FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66DA76AE2D3C1905004545FB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66DA76AD2D3C1905004545FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		66DA76B02D3C1905004545FB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66DA76AD2D3C1905004545FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		66DA76B22D3C1905004545FB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66DA76AD2D3C1905004545FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		66DA76B42D3C1905004545FB /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66DA76AD2D3C1905004545FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6679EF172CF51BD7001470EB /* Project object */;
 }
